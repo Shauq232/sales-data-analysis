@@ -2,6 +2,7 @@ package bestsellingproduct;
 import java.util.HashMap;
 public class BestSellingProduct {
     public static void main(String[] args) {
+        // Guard clause to prevent processing empty sales data
         if (productName.length == 0 || quantitySold.length == 0) {
     System.out.println("No sales data available.");
     return;
@@ -35,4 +36,5 @@ String[] productName = {"Laptop", "Mouse", "Laptop", "Keyboard", "Mouse"};
         System.out.println("Quantity Sold: " + bestQty);
     }
 }
+
 
