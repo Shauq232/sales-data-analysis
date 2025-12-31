@@ -2,6 +2,10 @@ package bestsellingproduct;
 import java.util.HashMap;
 public class BestSellingProduct {
     public static void main(String[] args) {
+        if (productName.length == 0 || quantitySold.length == 0) {
+    System.out.println("No sales data available.");
+    return;
+}
         
 String[] productName = {"Laptop", "Mouse", "Laptop", "Keyboard", "Mouse"};
         int[] quantitySold = {2, 5, 3, 4, 6};
@@ -31,3 +35,4 @@ String[] productName = {"Laptop", "Mouse", "Laptop", "Keyboard", "Mouse"};
         System.out.println("Quantity Sold: " + bestQty);
     }
 }
+
