@@ -7,6 +7,9 @@ public class SalesDataAnalysis {
         int[] quantities    = {8, 2, 4, 5, 1};
         HashMap<String, Integer> productTotals = new HashMap<>();
         for (int n = 0; n < products.length; n++) {
+            
+         if (quantities[n] == 0) continue;   // loop modification
+            
             if (productTotals.containsKey(products[n])) {
                 productTotals.put(
                     products[n],
@@ -69,3 +72,4 @@ public class SalesDataAnalysis {
         }
     }
 }
+
