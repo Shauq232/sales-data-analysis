@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class BestSellingProduct {
     public static void main(String args[]) {
         
-String[] NameOfProduct = {"Smartwatch", "computer", "headphones", "printer", "phone"};
+String[] NameOfProduct = {"Smartwatch", "printer", "computer", "printer", "Smartwatch"};
         int[] quantitynumberOfSold = {8, 2, 5, 1, 4};
 
         HashMap<String, Integer> totals = new HashMap<>();
@@ -31,3 +31,4 @@ String[] NameOfProduct = {"Smartwatch", "computer", "headphones", "printer", "ph
         System.out.println("Number Of Quantity Sold: " + BestQuantity);
     }
 }
+
