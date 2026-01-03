@@ -1,40 +1,33 @@
 package bestsellingproduct;
 import java.util.HashMap;
 public class BestSellingProduct {
-    public static void main(String[] args) {
-        // Guard clause to prevent processing empty sales data
-        if (productName.length == 0 || quantitySold.length == 0) {
-    System.out.println("No sales data available.");
-    return;
-}
+    public static void main(String args[]) {
         
-String[] productName = {"Laptop", "Mouse", "Laptop", "Keyboard", "Mouse"};
-        int[] quantitySold = {2, 5, 3, 4, 6};
+String[] NameOfProduct = {"Smartwatch", "computer", "headphones", "printer", "phone"};
+        int[] quantitynumberOfSold = {8, 2, 5, 1, 4};
 
         HashMap<String, Integer> totals = new HashMap<>();
 
-        for (int i = 0; i < productName.length; i++) {
-            if (totals.containsKey(productName[i])) {
-                totals.put(productName[i],
-                        totals.get(productName[i]) + quantitySold[i]);
+        for (int n = 0; n < NameOfProduct.length; n++) {
+            if (totals.containsKey(NameOfProduct[n])) {
+                totals.put(NameOfProduct[n],
+                        totals.get(NameOfProduct[n]) + quantitynumberOfSold[n]);
             } else {
-                totals.put(productName[i], quantitySold[i]);
+                totals.put(NameOfProduct[n], quantitynumberOfSold[n]);
             }
         }
         
-        String bestProduct = "NONE";
-        int bestQty = 0;
+        String TheBestProduct = "NONE";
+        int BestQuantity = 0;
 
-        for (String p : totals.keySet()) {
-            if (totals.get(p) > bestQty) {
-                bestQty = totals.get(p);
-                bestProduct = p;
+        for (String pr : totals.keySet()) {
+            if (totals.get(pr) > BestQuantity) {
+                BestQuantity= totals.get(pr);
+                TheBestProduct = pr;
             }
         }
 
-        System.out.println("Best Selling Product: " + bestProduct);
-        System.out.println("Quantity Sold: " + bestQty);
+        System.out.println("The Best Selling Product: " + TheBestProduct);
+        System.out.println("Number Of Quantity Sold: " + BestQuantity);
     }
 }
-
-
