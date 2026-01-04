@@ -38,7 +38,7 @@ public class SalesDataAnalysis {
             HashMap<String, Integer> prodCount = clientsPatterns.get(clients[n]);
 
             if (prodCount.containsKey(products[n])) {
-                prodCount.put(products[n], prodCount.get(products[n]) + 2);
+                prodCount.put(products[n], prodCount.get(products[n]) + 1);
             } else {
                 prodCount.put(products[n], 1);
             }
@@ -69,4 +69,5 @@ public class SalesDataAnalysis {
         }
     }
 }
+
 
